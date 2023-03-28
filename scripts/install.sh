@@ -1,8 +1,8 @@
 #!/bin/bash -x
 cd ~
-curl -O https://bitcoin.org/bin/bitcoin-core-0.18.0/bitcoin-0.18.0-x86_64-linux-gnu.tar.gz
-tar -zxf bitcoin-0.18.0-x86_64-linux-gnu.tar.gz
-sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.18.0/bin/*
+curl -O https://bitcoin.org/bin/bitcoin-core-22.0/bitcoin-22.0-aarch64-linux-gnu.tar.gz
+tar -zxf bitcoin-22.0-aarch64-linux-gnu.tar.gz
+sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-22.0/bin/*
 user=`whoami`
 command="bitcoind -daemon -conf=\/home\/$user\/.bitcoin\/bitcoin.conf"
 sudo sed -i "s/exit 0/$command/g" /etc/rc.local

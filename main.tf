@@ -18,7 +18,7 @@ resource "google_compute_instance" "node" {
 
   boot_disk {
     initialize_params {
-      image = "ubuntu-os-cloud/ubuntu-1604-lts"
+      image = "ubuntu-os-cloud/ubuntu-1804-lts-arm64"
       size = 300
     }
   }
