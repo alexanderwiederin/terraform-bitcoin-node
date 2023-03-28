@@ -12,13 +12,13 @@ resource "tls_private_key" "ssh-key" {
 resource "google_compute_instance" "node" {
   name         = "bitcoin-node"
   machine_type = "custom-2-9216"
-  zone         = "us-central1-a"
+  zone         = "europe-central2-a"
 
   tags = ["bitcoin"]
 
   boot_disk {
     initialize_params {
-      image = "ubuntu-os-cloud/ubuntu-1804-lts-arm64"
+      image = "ubuntu-os-cloud/ubuntu-1804-lts"
       size = 300
     }
   }
