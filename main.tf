@@ -11,7 +11,7 @@ resource "tls_private_key" "ssh-key" {
 
 resource "google_compute_instance" "node" {
   name         = "bitcoin-node"
-  machine_type = "custom-2-9216"
+  machine_type = "e2-small"
   zone         = "europe-central2-a"
 
   tags = ["bitcoin"]
