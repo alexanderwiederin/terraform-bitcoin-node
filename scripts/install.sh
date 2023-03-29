@@ -6,6 +6,7 @@ sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-22.0/bin/*
 user=`whoami`
 command="bitcoind -daemon -conf=\/home\/$user\/.bitcoin\/bitcoin.conf"
 mkdir etc
+sudo touch /etc/rc.local
 sudo sed -i "s/exit 0/$command/g" /etc/rc.local
 sudo sh -c "echo exit 0 >> /etc/rc.local"
 bitcoind -daemon
